@@ -8,6 +8,7 @@ contract MPeople {
 
     address owner;
 
+    //this modifier only allows the setDetails function to execute only when the address is from the sender account
     modifier onlyOwner() {
         require(msg.sender == owner);
         _;
